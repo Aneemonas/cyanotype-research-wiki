@@ -1,0 +1,425 @@
+{
+ "sections": [
+  {
+   "id": "start",
+   "icon": "icon_info",
+   "title": {
+    "en": "Getting started",
+    "pt": "Primeiros passos"
+   },
+   "pages": [
+    {
+     "id": "intro",
+     "title": {
+      "en": "What is Cyanotype Research",
+      "pt": "O que é o Cyanotype Research"
+     }
+    },
+    {
+     "id": "install",
+     "title": {
+      "en": "Installation",
+      "pt": "Instalação"
+     }
+    },
+    {
+     "id": "loaders",
+     "title": {
+      "en": "NeoForge, Forge and Fabric",
+      "pt": "NeoForge, Forge e Fabric"
+     }
+    },
+    {
+     "id": "tour",
+     "title": {
+      "en": "Five-minute tour",
+      "pt": "Tour de cinco minutos"
+     }
+    }
+   ]
+  },
+  {
+   "id": "player",
+   "icon": "icon_team",
+   "title": {
+    "en": "Player guide",
+    "pt": "Guia do jogador"
+   },
+   "pages": [
+    {
+     "id": "machine",
+     "title": {
+      "en": "The Research Station",
+      "pt": "A Research Station"
+     }
+    },
+    {
+     "id": "opening-trees",
+     "title": {
+      "en": "Opening a tree",
+      "pt": "Abrindo uma árvore"
+     }
+    },
+    {
+     "id": "navigation",
+     "title": {
+      "en": "Moving around the tree",
+      "pt": "Navegando pela árvore"
+     }
+    },
+    {
+     "id": "node-states",
+     "title": {
+      "en": "Node states",
+      "pt": "Estados dos nós"
+     }
+    },
+    {
+     "id": "researching",
+     "title": {
+      "en": "Researching a node",
+      "pt": "Pesquisando um nó"
+     }
+    },
+    {
+     "id": "codex",
+     "title": {
+      "en": "The Codex",
+      "pt": "O Codex"
+     }
+    },
+    {
+     "id": "lab-level",
+     "title": {
+      "en": "Lab level and HUD",
+      "pt": "Lab level e HUD"
+     }
+    },
+    {
+     "id": "teams",
+     "title": {
+      "en": "Teams",
+      "pt": "Times"
+     }
+    },
+    {
+     "id": "feeding",
+     "title": {
+      "en": "Feeding the machine",
+      "pt": "Alimentando a máquina"
+     }
+    },
+    {
+     "id": "locks",
+     "title": {
+      "en": "What is locked and why",
+      "pt": "O que está bloqueado e por quê"
+     }
+    },
+    {
+     "id": "preferences",
+     "title": {
+      "en": "Preferences",
+      "pt": "Preferências"
+     }
+    },
+    {
+     "id": "tips",
+     "title": {
+      "en": "Tips for players",
+      "pt": "Dicas para jogadores"
+     }
+    }
+   ]
+  },
+  {
+   "id": "dev",
+   "icon": "icon_edit",
+   "title": {
+    "en": "Developer guide",
+    "pt": "Guia do desenvolvedor"
+   },
+   "pages": [
+    {
+     "id": "quick-start",
+     "title": {
+      "en": "Your first tree in 10 minutes",
+      "pt": "Sua primeira árvore em 10 minutos"
+     }
+    },
+    {
+     "id": "mental-model",
+     "title": {
+      "en": "Mental model",
+      "pt": "Modelo mental"
+     }
+    },
+    {
+     "id": "editor",
+     "title": {
+      "en": "The in-game editor",
+      "pt": "O editor dentro do jogo"
+     }
+    },
+    {
+     "id": "tree-file",
+     "title": {
+      "en": "The tree file",
+      "pt": "O arquivo da árvore"
+     }
+    },
+    {
+     "id": "node-fields",
+     "title": {
+      "en": "Node fields",
+      "pt": "Campos do nó"
+     }
+    },
+    {
+     "id": "progression",
+     "title": {
+      "en": "Progression recipes",
+      "pt": "Receitas de progressão"
+     }
+    },
+    {
+     "id": "cross-tree",
+     "title": {
+      "en": "Cross-tree links",
+      "pt": "Links entre árvores"
+     }
+    },
+    {
+     "id": "requirements",
+     "title": {
+      "en": "Requirements",
+      "pt": "Requisitos"
+     }
+    },
+    {
+     "id": "rewards",
+     "title": {
+      "en": "Rewards",
+      "pt": "Recompensas"
+     }
+    },
+    {
+     "id": "functions",
+     "title": {
+      "en": "Functions (.cyan)",
+      "pt": "Functions (.cyan)"
+     }
+    },
+    {
+     "id": "restrictions",
+     "title": {
+      "en": "Restrictions and recipe locks",
+      "pt": "Restrições e bloqueio de receitas"
+     }
+    },
+    {
+     "id": "resources",
+     "title": {
+      "en": "Machine resources",
+      "pt": "Recursos da máquina"
+     }
+    },
+    {
+     "id": "advanced-nodes",
+     "title": {
+      "en": "Advanced nodes",
+      "pt": "Nós avançados"
+     }
+    },
+    {
+     "id": "settings",
+     "title": {
+      "en": "World settings",
+      "pt": "Configurações do mundo"
+     }
+    },
+    {
+     "id": "translations",
+     "title": {
+      "en": "Translations",
+      "pt": "Traduções"
+     }
+    },
+    {
+     "id": "datapacks",
+     "title": {
+      "en": "Datapacks and mods",
+      "pt": "Datapacks e mods"
+     }
+    },
+    {
+     "id": "commands",
+     "title": {
+      "en": "Commands",
+      "pt": "Comandos"
+     }
+    },
+    {
+     "id": "stages",
+     "title": {
+      "en": "Stages and scoreboard",
+      "pt": "Stages e scoreboard"
+     }
+    },
+    {
+     "id": "customize",
+     "title": {
+      "en": "Customizing the look",
+      "pt": "Personalizando o visual"
+     }
+    },
+    {
+     "id": "theme",
+     "title": {
+      "en": "theme.json reference",
+      "pt": "Referência do theme.json"
+     }
+    },
+    {
+     "id": "resource-pack",
+     "title": {
+      "en": "Sprites and textures",
+      "pt": "Sprites e texturas"
+     }
+    },
+    {
+     "id": "skins",
+     "title": {
+      "en": "Machine skins",
+      "pt": "Skins da máquina"
+     }
+    },
+    {
+     "id": "sounds",
+     "title": {
+      "en": "Sounds",
+      "pt": "Sons"
+     }
+    },
+    {
+     "id": "visuals",
+     "title": {
+      "en": "Pictures and backgrounds",
+      "pt": "Imagens e fundos"
+     }
+    },
+    {
+     "id": "shaders",
+     "title": {
+      "en": "Custom shaders",
+      "pt": "Shaders personalizados"
+     }
+    },
+    {
+     "id": "recipe-viewers",
+     "title": {
+      "en": "JEI, EMI and REI",
+      "pt": "JEI, EMI e REI"
+     }
+    },
+    {
+     "id": "api",
+     "title": {
+      "en": "API, events and KubeJS",
+      "pt": "API, eventos e KubeJS"
+     }
+    },
+    {
+     "id": "performance",
+     "title": {
+      "en": "Performance",
+      "pt": "Desempenho"
+     }
+    },
+    {
+     "id": "limits",
+     "title": {
+      "en": "Limits and status",
+      "pt": "Limites e status"
+     }
+    }
+   ]
+  },
+  {
+   "id": "examples",
+   "icon": "icon_star",
+   "title": {
+    "en": "Pack examples",
+    "pt": "Exemplos de pack"
+   },
+   "pages": [
+    {
+     "id": "overview",
+     "title": {
+      "en": "How to use the examples",
+      "pt": "Como usar os exemplos"
+     }
+    },
+    {
+     "id": "tech-pack",
+     "title": {
+      "en": "Tech pack",
+      "pt": "Pack de tecnologia"
+     }
+    },
+    {
+     "id": "exploration-pack",
+     "title": {
+      "en": "Exploration pack",
+      "pt": "Pack de exploração"
+     }
+    },
+    {
+     "id": "rpg-pack",
+     "title": {
+      "en": "RPG pack",
+      "pt": "Pack de RPG"
+     }
+    },
+    {
+     "id": "cookbook",
+     "title": {
+      "en": "Cookbook",
+      "pt": "Livro de receitas"
+     }
+    }
+   ]
+  },
+  {
+   "id": "ref",
+   "icon": "icon_help",
+   "title": {
+    "en": "Reference",
+    "pt": "Referência"
+   },
+   "pages": [
+    {
+     "id": "files",
+     "title": {
+      "en": "Files and folders",
+      "pt": "Arquivos e pastas"
+     }
+    },
+    {
+     "id": "faq",
+     "title": {
+      "en": "FAQ and troubleshooting",
+      "pt": "FAQ e solução de problemas"
+     }
+    },
+    {
+     "id": "changelog",
+     "title": {
+      "en": "Version history",
+      "pt": "Histórico de versões"
+     }
+    }
+   ]
+  }
+ ]
+}

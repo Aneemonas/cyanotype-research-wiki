@@ -1,0 +1,50 @@
+{
+  id: "electric_age",
+  input: "cyanotype:electrical_blueprint",
+  nodes: [
+    {
+      id: "generator",
+      title: "First Generator",
+      description: "&7Make your own power.\n&8Deliver 20000 FE to the machine.",
+      icon: "minecraft:redstone_block",
+      x: 0, y: -60,
+      parents: ["steam_age/steam_master"],
+      cost: [{ item: "minecraft:redstone", count: 32 }],
+      tasks: [{ type: "energy", args: ["20000"] }],
+      rewards: [{ type: "toast", args: ["Electric Age", "Power is online.", "minecraft:redstone_block"] }]
+    },
+    {
+      id: "circuits",
+      title: "Circuits",
+      description: "&7Etch the first boards.",
+      icon: "minecraft:comparator",
+      x: -60, y: -120,
+      parents: ["generator"],
+      tasks: [{ type: "feed_item", args: ["minecraft:redstone", "64"] }, { type: "feed_item", args: ["minecraft:gold_ingot", "16"] }],
+      locks: ["minecraft:comparator", "minecraft:repeater"],
+      lock_masks: [I; 1, 1]
+    },
+    {
+      id: "storage",
+      title: "Digital Storage",
+      description: "&7Unlocks the storage network.\n&8Its menus stay closed until now.",
+      icon: "minecraft:ender_chest",
+      x: 60, y: -120,
+      parents: ["generator"],
+      cost: [{ item: "minecraft:diamond", count: 4 }],
+      locks: ["ae2:*"],
+      lock_masks: [I; 9]
+    },
+    {
+      id: "electric_master",
+      title: "Master of Electricity",
+      icon: "minecraft:lightning_rod",
+      shape: "hexagon",
+      scale: 1.5,
+      x: 0, y: -190,
+      parents: ["circuits", "storage"],
+      xp_levels: 8,
+      rewards: [{ type: "item", args: ["cyanotype:automation_blueprint", "1"] }]
+    }
+  ]
+}

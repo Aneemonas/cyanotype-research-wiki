@@ -1,0 +1,7 @@
+{
+  sources: [
+    { id: "mana", name: "Mana", icon: "botania:mana_pool", fe_ratio: 0.0d, adapter: "botania_mana" },
+    { id: "oxygen", name: "Oxygen", icon: "minecraft:glass_bottle", fe_ratio: 0.0d, adapter: "chemical:mekanism:oxygen" },
+    { id: "eu", name: "EU", icon: "minecraft:redstone", fe_ratio: 4.0d, adapter: "" }
+  ]
+}

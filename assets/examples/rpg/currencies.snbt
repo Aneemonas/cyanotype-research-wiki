@@ -1,0 +1,5 @@
+{
+  currencies: [
+    { id: "skill_point", name: "Skill Point", icon: "star" }
+  ]
+}

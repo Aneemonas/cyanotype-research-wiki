@@ -1,0 +1,68 @@
+{
+  id: "steam_age",
+  input: "cyanotype:steam_blueprint",
+  lock_message: "Finish the previous machine first.",
+  nodes: [
+    {
+      id: "boiler",
+      title: "Boiler",
+      description: "&7Heat water into pressure.\n&8Deliver 4000 mB of water to the machine.",
+      icon: "minecraft:blast_furnace",
+      x: 0, y: -60,
+      parents: [],
+      cost: [{ item: "minecraft:iron_ingot", count: 16 }],
+      tasks: [{ type: "fluid", args: ["minecraft:water", "4000"] }],
+      rewards: [{ type: "toast", args: ["Steam Age", "The boiler is lit.", "minecraft:blast_furnace"] }],
+      grant_stages: ["steam_started"]
+    },
+    {
+      id: "press",
+      title: "Mechanical Press",
+      description: "&7Flatten ingots into plates.",
+      icon: "create:mechanical_press",
+      x: -60, y: -120,
+      parents: ["boiler"],
+      cost: [{ item: "minecraft:iron_ingot", count: 8 }],
+      locks: ["create:mechanical_press"],
+      lock_masks: [I; 1]
+    },
+    {
+      id: "mixer",
+      title: "Mechanical Mixer",
+      description: "&7Blend alloys.\n&8Deliver 16 gunpowder to the machine.",
+      icon: "create:mechanical_mixer",
+      x: 60, y: -120,
+      parents: ["boiler"],
+      tasks: [{ type: "feed_item", args: ["minecraft:gunpowder", "16"] }],
+      locks: ["create:mechanical_mixer"],
+      lock_masks: [I; 1]
+    },
+    {
+      id: "pipes",
+      title: "Fluid Pipes",
+      description: "&7Move liquids around the base.",
+      icon: "create:fluid_pipe",
+      x: 0, y: -180,
+      parents: ["press", "mixer"],
+      any_parent: true,
+      cost: [{ item: "minecraft:copper_ingot", count: 12 }],
+      locks: ["create:fluid_pipe", "create:mechanical_pump"],
+      lock_masks: [I; 1, 1]
+    },
+    {
+      id: "steam_master",
+      title: "Master of Steam",
+      description: "&6You understand pressure.\n&7Opens the Electric Age.",
+      icon: "minecraft:piston",
+      shape: "hexagon",
+      scale: 1.5,
+      x: 0, y: -250,
+      parents: ["pipes"],
+      xp_levels: 5,
+      rewards: [
+        { type: "title", args: ["Steam Age", "complete"] },
+        { type: "item", args: ["cyanotype:electrical_blueprint", "1"] }
+      ]
+    }
+  ]
+}

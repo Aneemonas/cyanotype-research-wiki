@@ -1,0 +1,66 @@
+{
+  id: "overworld_atlas",
+  input: "cyanotype:exploration_blueprint",
+  nodes: [
+    {
+      id: "first_steps",
+      title: "First Steps",
+      description: "&7Walk one kilometre.",
+      icon: "minecraft:leather_boots",
+      x: 0, y: -60,
+      parents: [],
+      tasks: [{ type: "stat", args: ["custom", "walk_one_cm", "100000"] }]
+    },
+    {
+      id: "forest",
+      title: "Into the Woods",
+      icon: "minecraft:oak_sapling",
+      x: -72, y: -120,
+      parents: ["first_steps"],
+      tasks: [{ type: "biome", args: ["minecraft:forest"] }]
+    },
+    {
+      id: "desert",
+      title: "Sun and Sand",
+      icon: "minecraft:cactus",
+      x: 0, y: -120,
+      parents: ["first_steps"],
+      tasks: [{ type: "biome", args: ["minecraft:desert"] }]
+    },
+    {
+      id: "peaks",
+      title: "Roof of the World",
+      icon: "minecraft:snow_block",
+      x: 72, y: -120,
+      parents: ["first_steps"],
+      tasks: [{ type: "biome", args: ["minecraft:jagged_peaks"] }]
+    },
+    {
+      id: "village",
+      title: "Meet the Locals",
+      description: "&7Stand in any village.",
+      icon: "minecraft:emerald",
+      x: -36, y: -180,
+      parents: ["forest", "desert"],
+      any_parent: true,
+      tasks: [{ type: "structure", args: ["#minecraft:village"] }],
+      rewards: [{ type: "item", args: ["minecraft:bread", "8"] }]
+    },
+    {
+      id: "cartographer",
+      title: "Cartographer",
+      description: "&6Two biomes and a village.\n&7Enough to draw a map.",
+      icon: "minecraft:filled_map",
+      shape: "hexagon",
+      scale: 1.5,
+      x: 18, y: -250,
+      parents: ["forest", "desert", "peaks", "village"],
+      parents_needed: 3,
+      rewards: [
+        { type: "toast", args: ["Cartographer", "The Atlas is complete.", "minecraft:filled_map"] },
+        { type: "loot_table", args: ["minecraft:chests/simple_dungeon"] },
+        { type: "xp_levels", args: ["3"] }
+      ]
+    }
+  ]
+}

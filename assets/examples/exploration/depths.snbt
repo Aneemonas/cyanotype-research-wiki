@@ -1,0 +1,52 @@
+{
+  id: "depths",
+  input: "cyanotype:dungeon_blueprint",
+  nodes: [
+    {
+      id: "dripstone",
+      title: "Stone Teeth",
+      icon: "minecraft:pointed_dripstone",
+      x: -48, y: -60,
+      parents: [],
+      tasks: [{ type: "biome", args: ["minecraft:dripstone_caves"] }]
+    },
+    {
+      id: "lush",
+      title: "Glow Berries",
+      icon: "minecraft:glow_berries",
+      x: 48, y: -60,
+      parents: [],
+      tasks: [{ type: "biome", args: ["minecraft:lush_caves"] }]
+    },
+    {
+      id: "deep_dark",
+      title: "Do Not Make a Sound",
+      description: "&8Something is listening.",
+      icon: "minecraft:sculk_shrieker",
+      x: 0, y: -130,
+      parents: ["dripstone", "lush"],
+      parents_needed: 2,
+      mystery: true,
+      hide_text: true,
+      reveal_mode: 2,
+      reveal_nodes: ["dripstone", "lush"],
+      tasks: [{ type: "biome", args: ["minecraft:deep_dark"] }],
+      rewards: [{ type: "effect", args: ["minecraft:night_vision", "120", "0"] }]
+    },
+    {
+      id: "ancient_city",
+      title: "The Ancient City",
+      description: "&5Stand inside it.",
+      icon: "minecraft:reinforced_deepslate",
+      shape: "diamond",
+      scale: 1.5,
+      x: 0, y: -210,
+      parents: ["deep_dark"],
+      tasks: [{ type: "structure", args: ["minecraft:ancient_city"] }],
+      rewards: [
+        { type: "title", args: ["Ancient City", "You made it in."] },
+        { type: "open_barrier", args: ["warden_gate", "open"] }
+      ]
+    }
+  ]
+}

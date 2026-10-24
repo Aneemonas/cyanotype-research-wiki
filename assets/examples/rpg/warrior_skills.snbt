@@ -1,0 +1,64 @@
+{
+  id: "warrior_skills",
+  input: "cyanotype:defense_blueprint",
+  nodes: [
+    {
+      id: "toughness",
+      title: "Toughness",
+      description: "&7+4 max health.\n&8Costs 1 skill point.",
+      icon: "minecraft:golden_apple",
+      x: 0, y: -60,
+      parents: ["class/warrior"],
+      tasks: [{ type: "currency", args: ["skill_point", "1", "spend"] }],
+      rewards: [{ type: "attribute", args: ["minecraft:generic.max_health", "4", "add"] }]
+    },
+    {
+      id: "berserker",
+      title: "Berserker",
+      description: "&cHit harder, think less.\n&7+2 attack damage.\n&8Costs 2 skill points. Excludes Guardian.",
+      icon: "minecraft:netherite_axe",
+      x: -60, y: -130,
+      parents: ["toughness"],
+      excludes: ["guardian"],
+      tasks: [{ type: "currency", args: ["skill_point", "2", "spend"] }],
+      rewards: [{ type: "attribute", args: ["minecraft:generic.attack_damage", "2", "add"] }]
+    },
+    {
+      id: "guardian",
+      title: "Guardian",
+      description: "&9Nothing gets past you.\n&7+4 armor.\n&8Costs 2 skill points. Excludes Berserker.",
+      icon: "minecraft:shield",
+      x: 60, y: -130,
+      parents: ["toughness"],
+      excludes: ["berserker"],
+      tasks: [{ type: "currency", args: ["skill_point", "2", "spend"] }],
+      rewards: [{ type: "attribute", args: ["minecraft:generic.armor", "4", "add"] }]
+    },
+    {
+      id: "rage",
+      title: "Rage",
+      description: "&7Slay 50 undead first.\n&7+0.2 attack speed (multiplier).",
+      icon: "minecraft:blaze_powder",
+      x: -60, y: -200,
+      parents: ["berserker"],
+      tasks: [
+        { type: "kill", args: ["#minecraft:undead", "50"] },
+        { type: "currency", args: ["skill_point", "2", "spend"] }
+      ],
+      rewards: [{ type: "attribute", args: ["minecraft:generic.attack_speed", "0.2", "mult_base"] }]
+    },
+    {
+      id: "bulwark",
+      title: "Bulwark",
+      description: "&7Take 200 damage first.\n&7+50% knockback resistance.",
+      icon: "minecraft:iron_chestplate",
+      x: 60, y: -200,
+      parents: ["guardian"],
+      tasks: [
+        { type: "receive_damage", args: ["", "200", "total"] },
+        { type: "currency", args: ["skill_point", "2", "spend"] }
+      ],
+      rewards: [{ type: "attribute", args: ["minecraft:generic.knockback_resistance", "0.5", "add"] }]
+    }
+  ]
+}

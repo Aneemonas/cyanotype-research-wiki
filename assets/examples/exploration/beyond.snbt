@@ -1,0 +1,42 @@
+{
+  id: "beyond",
+  input: "cyanotype:nether_blueprint",
+  nodes: [
+    {
+      id: "nether",
+      title: "Through the Portal",
+      icon: "minecraft:obsidian",
+      x: 0, y: -60,
+      parents: ["overworld_atlas/cartographer"],
+      tasks: [{ type: "dimension", args: ["minecraft:the_nether"] }]
+    },
+    {
+      id: "fortress",
+      title: "Nether Fortress",
+      icon: "minecraft:nether_bricks",
+      x: -48, y: -120,
+      parents: ["nether"],
+      tasks: [{ type: "structure", args: ["minecraft:fortress"] }]
+    },
+    {
+      id: "bastion",
+      title: "Bastion Remnant",
+      icon: "minecraft:gilded_blackstone",
+      x: 48, y: -120,
+      parents: ["nether"],
+      tasks: [{ type: "structure", args: ["minecraft:bastion_remnant"] }]
+    },
+    {
+      id: "the_end",
+      title: "The End",
+      icon: "minecraft:end_stone",
+      shape: "hexagon",
+      scale: 1.5,
+      x: 0, y: -190,
+      parents: ["fortress", "bastion"],
+      parents_needed: 2,
+      tasks: [{ type: "dimension", args: ["minecraft:the_end"] }],
+      rewards: [{ type: "toast", args: ["Beyond", "Nothing is out of reach now.", "minecraft:end_stone"] }]
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  id: "milestones",
+  input: "cyanotype:combat_blueprint",
+  nodes: [
+    {
+      id: "first_blood",
+      title: "First Blood",
+      icon: "minecraft:wooden_sword",
+      x: 0, y: -60,
+      parents: [],
+      tasks: [{ type: "kill", args: ["*", "1"] }],
+      rewards: [{ type: "currency", args: ["skill_point", "1"] }]
+    },
+    {
+      id: "slayer",
+      title: "Undead Slayer",
+      description: "&7Put 50 undead to rest.",
+      icon: "minecraft:rotten_flesh",
+      x: -48, y: -120,
+      parents: ["first_blood"],
+      tasks: [{ type: "kill", args: ["#minecraft:undead", "50"] }],
+      rewards: [{ type: "currency", args: ["skill_point", "1"] }]
+    },
+    {
+      id: "wanderer",
+      title: "Wanderer",
+      description: "&7Walk five kilometres.",
+      icon: "minecraft:compass",
+      x: 48, y: -120,
+      parents: ["first_blood"],
+      tasks: [{ type: "stat", args: ["custom", "walk_one_cm", "500000"] }],
+      rewards: [{ type: "currency", args: ["skill_point", "1"] }]
+    },
+    {
+      id: "veteran",
+      title: "Veteran",
+      description: "&7Reach lab level 3.",
+      icon: "minecraft:netherite_scrap",
+      shape: "hexagon",
+      x: 0, y: -190,
+      parents: ["slayer", "wanderer"],
+      tasks: [{ type: "lab_level", args: ["3"] }],
+      rewards: [
+        { type: "currency", args: ["skill_point", "2"] },
+        { type: "toast", args: ["Veteran", "Two skill points.", "minecraft:netherite_scrap"] }
+      ]
+    }
+  ]
+}

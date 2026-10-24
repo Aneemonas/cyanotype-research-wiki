@@ -1,0 +1,59 @@
+{
+  id: "class",
+  input: "cyanotype:research_blueprint",
+  nodes: [
+    {
+      id: "awakening",
+      title: "Awakening",
+      description: "&7Something stirs in you.\n&8Click the check when you are ready to choose a path.",
+      icon: "minecraft:nether_star",
+      shape: "circle",
+      scale: 1.5,
+      x: 0, y: -60,
+      parents: [],
+      tasks: [{ type: "check", args: ["I am ready"] }],
+      rewards: [{ type: "currency", args: ["skill_point", "2"] }]
+    },
+    {
+      id: "warrior",
+      title: "Warrior",
+      description: "&cBorn for the front line.\n&7+4 max health, +1 attack damage.",
+      icon: "minecraft:iron_sword",
+      x: -72, y: -130,
+      parents: ["awakening"],
+      excludes: ["mage", "ranger"],
+      rewards: [
+        { type: "attribute", args: ["minecraft:generic.max_health", "4", "add"] },
+        { type: "attribute", args: ["minecraft:generic.attack_damage", "1", "add"] },
+        { type: "message", args: ["&cYou are a Warrior now."] }
+      ]
+    },
+    {
+      id: "mage",
+      title: "Mage",
+      description: "&bThe world is a book.\n&7+2 luck and a spellbook.",
+      icon: "minecraft:enchanted_book",
+      x: 0, y: -130,
+      parents: ["awakening"],
+      excludes: ["warrior", "ranger"],
+      rewards: [
+        { type: "attribute", args: ["minecraft:generic.luck", "2", "add"] },
+        { type: "item", args: ["minecraft:book", "3"] },
+        { type: "message", args: ["&bYou are a Mage now."] }
+      ]
+    },
+    {
+      id: "ranger",
+      title: "Ranger",
+      description: "&aSwift and quiet.\n&7+10% movement speed.",
+      icon: "minecraft:bow",
+      x: 72, y: -130,
+      parents: ["awakening"],
+      excludes: ["warrior", "mage"],
+      rewards: [
+        { type: "attribute", args: ["minecraft:generic.movement_speed", "0.1", "mult_base"] },
+        { type: "message", args: ["&aYou are a Ranger now."] }
+      ]
+    }
+  ]
+}

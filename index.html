@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cyanotype Research Wiki</title>
+<meta name="description" content="Documentation for Cyanotype Research, a mod for NeoForge, Forge and Fabric 1.21.1: data-driven research trees, quests and skill systems for modpacks.">
+<meta name="theme-color" content="#0a2552">
+<link rel="icon" type="image/png" href="assets/img/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Instrument+Sans:wght@400..700&family=JetBrains+Mono:wght@500;700&display=swap">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/cyan.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="top" id="top">
+  <button class="icon-btn menu-btn" id="menuBtn" aria-label="Menu"><span></span><span></span><span></span></button>
+  <a class="brand" id="brand" href="#/en/">
+    <img src="assets/img/items/research_blueprint.png" alt="" class="sprite brand-ico">
+    <span class="brand-name">Cyanotype <b>Research</b></span>
+    <span class="brand-tag">WIKI</span>
+  </a>
+  <nav class="top-links" id="topLinks"></nav>
+  <div class="top-right">
+    <button class="search-btn" id="searchBtn" aria-label="Search"><img src="assets/img/ui/icon_search.png" alt="" class="sprite ico16"><span id="searchLabel">Search</span><kbd>Ctrl K</kbd></button>
+    <div class="lang" id="lang" role="group" aria-label="Language"><button data-l="en">EN</button><button data-l="pt">PT</button></div>
+  </div>
+</header>
+<div class="shell" id="shell">
+  <aside class="side" id="side"><nav id="sideNav"></nav></aside>
+  <main id="main" class="main" tabindex="-1"><article id="page" class="page"></article><div id="pager" class="pager"></div><footer id="foot" class="foot"></footer></main>
+  <aside class="toc" id="toc"></aside>
+</div>
+<div class="scrim" id="scrim"></div>
+<div class="modal" id="searchModal" hidden>
+  <div class="modal-box">
+    <div class="modal-head"><img src="assets/img/ui/icon_search.png" alt="" class="sprite ico16"><input id="searchInput" type="search" autocomplete="off" spellcheck="false" placeholder="Search the wiki..."><kbd>Esc</kbd></div>
+    <div class="modal-body" id="searchOut"></div>
+  </div>
+</div>
+<div class="lightbox" id="lightbox" hidden></div>
+<noscript><p style="padding:2rem;color:#fff">This wiki needs JavaScript.</p></noscript>
+<script src="js/app.js"></script>
+</body>
+</html>

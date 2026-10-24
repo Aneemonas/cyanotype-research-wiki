@@ -1,0 +1,38 @@
+{
+  id: "automation",
+  input: "cyanotype:automation_blueprint",
+  nodes: [
+    {
+      id: "hoppers",
+      title: "Hopper Line",
+      description: "&7Build a real feeder line.\n&8Place 8 new hoppers while this node is open.",
+      icon: "minecraft:hopper",
+      x: 0, y: -60,
+      parents: ["electric_age/electric_master"],
+      tasks: [{ type: "placed_new", args: ["minecraft:hopper", "8"] }]
+    },
+    {
+      id: "chest_wall",
+      title: "Warehouse",
+      description: "&7Show a stocked warehouse.\n&8Keep 128 iron ingots in chests within 8 blocks of the machine.",
+      icon: "minecraft:chest",
+      x: 0, y: -120,
+      parents: ["hoppers"],
+      tasks: [{ type: "container", args: ["minecraft:iron_ingot", "128", "8", "keep"] }]
+    },
+    {
+      id: "cobble_to_iron",
+      title: "Cobble to Iron",
+      description: "&7The machine pays you back.\n&8Deliver 64 cobblestone: iron goes straight to the output buffer. Repeats every 2 minutes.",
+      icon: "minecraft:iron_ingot",
+      x: 0, y: -180,
+      parents: ["chest_wall"],
+      tasks: [{ type: "feed_item", args: ["minecraft:cobblestone", "64"] }],
+      rewards: [{ type: "item", args: ["minecraft:iron_ingot", "8"] }],
+      repeatable: true,
+      repeat_seconds: 120,
+      auto_complete: true,
+      reward_to_buffer: true
+    }
+  ]
+}
